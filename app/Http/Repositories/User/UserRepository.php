@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 interface UserRepository
 {
+    public function create($data): USer;
+
     /**
      * @param int $id
      * @param $data

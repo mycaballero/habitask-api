@@ -4,14 +4,13 @@ namespace App\Http\DataTransferObjects\Task;
 
 use Spatie\LaravelData\Data;
 
-class SaveAllData extends Data
+class UpdateAllData extends Data
 {
     /**
      * @param int|null $owner_id
      * @param int|null $assigned_id
      * @param string|null $name
      * @param string|null $description
-     * @param bool|null $completed
      * @param string|null $start_date
      * @param string|null $end_date
      */
@@ -20,7 +19,6 @@ class SaveAllData extends Data
         public ?int    $assigned_id,
         public ?string $name,
         public ?string $description,
-        public ?bool   $completed,
         public ?string $start_date,
         public ?string $end_date,
 
@@ -38,7 +36,6 @@ class SaveAllData extends Data
             'assigned_id' => 'nullable|integer',
             'name'        => 'nullable|string|max:30',
             'description' => 'nullable|string|max:500',
-            'completed'   => 'nullable|boolean',
             'start_date'  => 'nullable|date',
             'end_date'    => 'nullable|date',
         ];
